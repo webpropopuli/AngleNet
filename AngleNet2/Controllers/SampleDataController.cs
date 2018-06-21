@@ -14,7 +14,11 @@ namespace AngleNet2.Controllers
             "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
         };
 
+
         [HttpGet("[action]")]
+                // ? THIS IS WHERE THE ACTION HAPPENS FOR THIS ROUTE 
+                // todo Copy to portfolio equivalent
+                            
         public IEnumerable<WeatherForecast> WeatherForecasts()
         {
             var rng = new Random();

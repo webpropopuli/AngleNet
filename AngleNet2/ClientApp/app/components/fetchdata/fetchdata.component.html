@@ -1,6 +1,6 @@
 <h1>Weather forecast</h1>
 
-<p>This component demonstrates fetching data from the server.</p>
+<p>We're getting some financial data.....</p>
 
 <p *ngIf="!forecasts"><em>Loading...</em></p>
 
@@ -19,6 +19,28 @@
             <td>{{ forecast.temperatureC }}</td>
             <td>{{ forecast.temperatureF }}</td>
             <td>{{ forecast.summary }}</td>
+        </tr>
+    </tbody>
+</table>
+
+<!-- only show this if portfolio is built (ng-if) -->
+
+<p *ngIf="!portfolio"><em>Loading...</em></p> 
+<table class='table' *ngIf="portfolio">
+    <thead>
+        <tr>
+            <th>Stock</th>
+            <th>Sym</th>
+            <th>High</th>
+            <th>Low</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let stk of stocks">
+            <td>{{ stk.name }}</td>
+            <td>{{ stk.sym }}</td>
+            <td>{{ stk.high }}</td>
+            <td>{{ stk.low }}</td>
         </tr>
     </tbody>
 </table>
